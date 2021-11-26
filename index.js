@@ -50,9 +50,7 @@ app.post('/sms', function (request, response){
 	  break;
 	}
     default:
-      lastMessage = request.body.Body;
-      twiml.message('You have registered your message as the last message. Type last to see the last');
-
+      twiml.message("Text 'new game' to start a game. Only responses of 1 through 10 will be accepted as guesses.");
   }
 
   response.writeHead(200, {'Content-Type' : 'text/xml'})
